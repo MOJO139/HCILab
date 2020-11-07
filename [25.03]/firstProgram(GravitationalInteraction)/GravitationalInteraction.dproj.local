@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.647,C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\Unit1.pas=C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\SpaceDistanse.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.585,C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\SpaceDistanse.pas=C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\Power.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.146,C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\Unit2.dfm=C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.352,=C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.076,=C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.606,C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\Unit1.pas=C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\fileControl.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.395,C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\Unit2.dfm=C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\Main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.561,C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\GravitationalInteraction.dproj=C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\Project2.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.264,=C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.901,=C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.038,C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\Project2.dproj=C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.395,C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\Unit2.pas=C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\Main.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.146,C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\Unit2.pas=C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+  </Transactions>
+</BorlandProject>

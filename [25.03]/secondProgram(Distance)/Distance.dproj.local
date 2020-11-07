@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.670,C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Unit4.pas=C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\fileControl.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.294,C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Main.pas=C:\Users\dyxa4\Desktop\ЧМВ\[25.03]s\Main.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.825,C:\Users\dyxa4\Desktop\ЧМВ\[25.03]s\DistanceBetweenPoints.pas=C:\Users\dyxa4\Desktop\ЧМВ\[25.03]s\DistanseBetweenPoints.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.294,C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Main.dfm=C:\Users\dyxa4\Desktop\ЧМВ\[25.03]s\Main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.019,C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\DistanseBetweenPoints.pas=C:\Users\dyxa4\Desktop\ЧМВ\[25.03]s\DistanseBetweenPoints.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.857,=C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.574,C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Unit3.pas=C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\DistanseBetweenPoints.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.082,=C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.031,=C:\Users\dyxa4\Desktop\ЧМВ\[25.03]s\fileControl.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.204,=C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.901,=C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.695,C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\fileControl.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.062,=C:\Users\dyxa4\Desktop\ЧМВ\[25.03]\fileControl.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.378,C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\dyxa4\Desktop\ЧМВ\[25.03]s\Project2.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.353,C:\Users\dyxa4\Desktop\ЧМВ\[25.03]s\Distance.dproj=C:\Users\dyxa4\Desktop\ЧМВ\[25.03]s\Project2.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.934,C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.934,C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\dyxa4\OneDrive\Документы\Embarcadero\Studio\Projects\Main.pas</Transaction>
+  </Transactions>
+</BorlandProject>
