@@ -1,4 +1,4 @@
-unit Main;
+п»їunit Main;
 
 interface
 
@@ -7,8 +7,8 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Menus;
 
 type
-  TForm2 = class(TForm)
-    //Поля класса:
+  TForm2 = class(TForm) //РљРґР°СЃСЃ С„РѕСЂРјС‹;
+    //РџРѕР»СЏ РєР»Р°СЃСЃР°:
     GroupBox1: TGroupBox;
     Label1: TLabel;
     Label2: TLabel;
@@ -32,7 +32,7 @@ type
     N8: TMenuItem;
     N9: TMenuItem;
 
-    //Методы класса:
+    //РњРµС‚РѕРґС‹ РєР»Р°СЃСЃР°:
     procedure FormCreate(Sender: TObject);
     procedure CalculateClick(Sender: TObject);
     procedure N2Click(Sender: TObject);
@@ -46,53 +46,53 @@ type
   end;
 
 var
-  Form2: TForm2; //Объявление объекта класса;
+  Form2: TForm2; //РћР±СЉСЏРІР»РµРЅРёРµ РѕР±СЉРµРєС‚Р° РєР»Р°СЃСЃР°;
 
 implementation
 
 {$R *.dfm}
 
-uses DistanceBetweenPoints, fileControl; //Подключение модулей для загрузки в/из файла и с функцией для расчета дистанции между точками;
+uses DistanceBetweenPoints, fileControl; //РџРѕРґРєР»СЋС‡РµРЅРёРµ РјРѕРґСѓР»РµР№ РґР»СЏ Р·Р°РіСЂСѓР·РєРё РІ/РёР· С„Р°Р№Р»Р° Рё СЃ С„СѓРЅРєС†РёРµР№ РґР»СЏ СЂР°СЃС‡РµС‚Р° РґРёСЃС‚Р°РЅС†РёРё РјРµР¶РґСѓ С‚РѕС‡РєР°РјРё;
 
-//Для определения метода класса вне самого класса нужно обратиться к прототипу метода в теле класса, через имя класса и селектор;
-procedure TForm2.CalculateClick(Sender: TObject); //Процедура нажатия на кнопку "Вычислить";
+//Р”Р»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РјРµС‚РѕРґР° РєР»Р°СЃСЃР° РІРЅРµ СЃР°РјРѕРіРѕ РєР»Р°СЃСЃР° РЅСѓР¶РЅРѕ РѕР±СЂР°С‚РёС‚СЊСЃСЏ Рє РїСЂРѕС‚РѕС‚РёРїСѓ РјРµС‚РѕРґР° РІ С‚РµР»Рµ РєР»Р°СЃСЃР°, С‡РµСЂРµР· РёРјСЏ РєР»Р°СЃСЃР° Рё СЃРµР»РµРєС‚РѕСЂ;
+procedure TForm2.CalculateClick(Sender: TObject); //РџСЂРѕС†РµРґСѓСЂР° РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ "Р’С‹С‡РёСЃР»РёС‚СЊ";
   begin
-    if (x1.Text = '') or (x1.Text = '-') or (x1.Text = FormatSettings.DecimalSeparator) then //Проверка x1 на корректность;
-      ShowMessage('Поле x первой точки не должно быть пустым/знаком !!')
-    else if (y1.Text = '') or (y1.Text = '-') or (y1.Text = FormatSettings.DecimalSeparator) then //Проверка y1 на корректность;
-      ShowMessage('Поле y первой точки не должно быть пустым/знаком !!')
-    else if (x2.Text = '') or (x2.Text = '-') or (x2.Text = FormatSettings.DecimalSeparator) then //Проверка x2 на корректность;
-      ShowMessage('Поле x второй точки не должно быть пустым/знаком !!')
-    else if (y2.Text = '') or (y2.Text = '-') or (y2.Text = FormatSettings.DecimalSeparator) then //Проверка y1 на корректность;
-      ShowMessage('Поле y второй точки не должно быть пустым/знаком !!')
-    else //Если все прошло проверку на корректность;
+    if (x1.Text = '') or (x1.Text = '-') or (x1.Text = FormatSettings.DecimalSeparator) then //РџСЂРѕРІРµСЂРєР° x1 РЅР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ;
+      ShowMessage('РџРѕР»Рµ x РїРµСЂРІРѕР№ С‚РѕС‡РєРё РЅРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј/Р·РЅР°РєРѕРј !!')
+    else if (y1.Text = '') or (y1.Text = '-') or (y1.Text = FormatSettings.DecimalSeparator) then //РџСЂРѕРІРµСЂРєР° y1 РЅР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ;
+      ShowMessage('РџРѕР»Рµ y РїРµСЂРІРѕР№ С‚РѕС‡РєРё РЅРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј/Р·РЅР°РєРѕРј !!')
+    else if (x2.Text = '') or (x2.Text = '-') or (x2.Text = FormatSettings.DecimalSeparator) then //РџСЂРѕРІРµСЂРєР° x2 РЅР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ;
+      ShowMessage('РџРѕР»Рµ x РІС‚РѕСЂРѕР№ С‚РѕС‡РєРё РЅРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј/Р·РЅР°РєРѕРј !!')
+    else if (y2.Text = '') or (y2.Text = '-') or (y2.Text = FormatSettings.DecimalSeparator) then //РџСЂРѕРІРµСЂРєР° y1 РЅР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ;
+      ShowMessage('РџРѕР»Рµ y РІС‚РѕСЂРѕР№ С‚РѕС‡РєРё РЅРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј/Р·РЅР°РєРѕРј !!')
+    else //Р•СЃР»Рё РІСЃРµ РїСЂРѕС€Р»Рѕ РїСЂРѕРІРµСЂРєСѓ РЅР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ;
       begin
-        Results.Lines.Add('Растояние между точками: A( ' + x1.Text + ';' + y1.Text + ') и B(' + x2.Text + ';' + y2.Text + ') равно: '
+        Results.Lines.Add('Р Р°СЃС‚РѕСЏРЅРёРµ РјРµР¶РґСѓ С‚РѕС‡РєР°РјРё: A( ' + x1.Text + ';' + y1.Text + ') Рё B(' + x2.Text + ';' + y2.Text + ') СЂР°РІРЅРѕ: '
                           + FormatFloat('0.0', (DistanseBetween(StrTofloat(x1.Text), StrTofloat(y1.Text), StrTofloat(x2.Text), StrTofloat(y2.Text)))) + ';');
         Results.Lines.Add(StringOfChar('=', 60));
       end;
   end;
 
-procedure TForm2.FormCreate(Sender: TObject); //Процедура вызываемая при создании формы;
+procedure TForm2.FormCreate(Sender: TObject); //РџСЂРѕС†РµРґСѓСЂР° РІС‹Р·С‹РІР°РµРјР°СЏ РїСЂРё СЃРѕР·РґР°РЅРёРё С„РѕСЂРјС‹;
   begin
     Randomize;
 
-    Results.Text := ''; //Очистка Memo;
-    Results.Lines.Add(StringOfChar('=', 60)); //Вывод первого разделителя;
+    Results.Text := ''; //РћС‡РёСЃС‚РєР° Memo;
+    Results.Lines.Add(StringOfChar('=', 60)); //Р’С‹РІРѕРґ РїРµСЂРІРѕРіРѕ СЂР°Р·РґРµР»РёС‚РµР»СЏ;
 
-    x1.Text := intToStr(Random(101) - 50); //Задание рандомного заничения x1;
-    y1.Text := intToStr(Random(101) - 50); //Задание рандомного заничения y1;
+    x1.Text := intToStr(Random(101) - 50); //Р—Р°РґР°РЅРёРµ СЂР°РЅРґРѕРјРЅРѕРіРѕ Р·Р°РЅРёС‡РµРЅРёСЏ x1;
+    y1.Text := intToStr(Random(101) - 50); //Р—Р°РґР°РЅРёРµ СЂР°РЅРґРѕРјРЅРѕРіРѕ Р·Р°РЅРёС‡РµРЅРёСЏ y1;
 
-    x2.Text := intToStr(Random(101) - 50); //Задание рандомного заничения x2;
-    y2.Text := intToStr(Random(101) - 50); //Задание рандомного заничения y2;
+    x2.Text := intToStr(Random(101) - 50); //Р—Р°РґР°РЅРёРµ СЂР°РЅРґРѕРјРЅРѕРіРѕ Р·Р°РЅРёС‡РµРЅРёСЏ x2;
+    y2.Text := intToStr(Random(101) - 50); //Р—Р°РґР°РЅРёРµ СЂР°РЅРґРѕРјРЅРѕРіРѕ Р·Р°РЅРёС‡РµРЅРёСЏ y2;
   end;
 
-procedure TForm2.N2Click(Sender: TObject); //Процедура нажатия на кнопку "Открыть";
+procedure TForm2.N2Click(Sender: TObject); //РџСЂРѕС†РµРґСѓСЂР° РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ "РћС‚РєСЂС‹С‚СЊ";
   var b_fx, b_fy, b_sx, b_sy : string;
 
   begin
     if OpenDialog1.Execute then
-      loadParameters(b_fx, b_fy, b_sx, b_sy, OpenDialog1.FileName); //Процедура для загрузки данных из файла;
+      loadParameters(b_fx, b_fy, b_sx, b_sy, OpenDialog1.FileName); //РџСЂРѕС†РµРґСѓСЂР° РґР»СЏ Р·Р°РіСЂСѓР·РєРё РґР°РЅРЅС‹С… РёР· С„Р°Р№Р»Р°;
 
     if not(b_fx = '') or not(b_fy = '') or not(b_sx = '') or not(b_sy = '') then
       begin
@@ -104,31 +104,31 @@ procedure TForm2.N2Click(Sender: TObject); //Процедура нажатия на кнопку "Открыт
       end;
   end;
 
-procedure TForm2.N3Click(Sender: TObject); //Процедура выполняемая по нажатию кнопки "сохранить";
+procedure TForm2.N3Click(Sender: TObject); //РџСЂРѕС†РµРґСѓСЂР° РІС‹РїРѕР»РЅСЏРµРјР°СЏ РїРѕ РЅР°Р¶Р°С‚РёСЋ РєРЅРѕРїРєРё "СЃРѕС…СЂР°РЅРёС‚СЊ";
   begin
     if SaveDialog1.Execute then
-      saveParameters(x1.Text, y1.Text, x2.Text, y2.Text, SaveDialog1.FileName); //Процедура для сохранения данных в файл;
+      saveParameters(x1.Text, y1.Text, x2.Text, y2.Text, SaveDialog1.FileName); //РџСЂРѕС†РµРґСѓСЂР° РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ РґР°РЅРЅС‹С… РІ С„Р°Р№Р»;
   end;
 
-procedure TForm2.N4Click(Sender: TObject); //Процедура выполняемая по нажатию кнопки "сохранить отчет";
+procedure TForm2.N4Click(Sender: TObject); //РџСЂРѕС†РµРґСѓСЂР° РІС‹РїРѕР»РЅСЏРµРјР°СЏ РїРѕ РЅР°Р¶Р°С‚РёСЋ РєРЅРѕРїРєРё "СЃРѕС…СЂР°РЅРёС‚СЊ РѕС‚С‡РµС‚";
   begin
     if SaveDialog1.Execute then
-      saveLog(Results.Text, SaveDialog1.FileName); //Процедура для сохранения лога в файл;
+      saveLog(Results.Text, SaveDialog1.FileName); //РџСЂРѕС†РµРґСѓСЂР° РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ Р»РѕРіР° РІ С„Р°Р№Р»;
   end;
 
-procedure TForm2.N5Click(Sender: TObject); //Процедура выполняемая по нажатию кнопки "выйти";
+procedure TForm2.N5Click(Sender: TObject); //РџСЂРѕС†РµРґСѓСЂР° РІС‹РїРѕР»РЅСЏРµРјР°СЏ РїРѕ РЅР°Р¶Р°С‚РёСЋ РєРЅРѕРїРєРё "РІС‹Р№С‚Рё";
   begin
-    Form2.Close; //Закрытие формы;
+    Form2.Close; //Р—Р°РєСЂС‹С‚РёРµ С„РѕСЂРјС‹;
   end;
 
 procedure TForm2.N7Click(Sender: TObject);
   begin
-    ShowMessage('Сделал: Павленко Андрей.');
+    ShowMessage('РЎРґРµР»Р°Р»: РџР°РІР»РµРЅРєРѕ РђРЅРґСЂРµР№.');
   end;
 
 procedure TForm2.N8Click(Sender: TObject);
   begin
-    ShowMessage('Вычислить расстояние между двумя точками.');
+    ShowMessage('Р’С‹С‡РёСЃР»РёС‚СЊ СЂР°СЃСЃС‚РѕСЏРЅРёРµ РјРµР¶РґСѓ РґРІСѓРјСЏ С‚РѕС‡РєР°РјРё.');
   end;
 
 procedure TForm2.N9Click(Sender: TObject);
@@ -136,9 +136,9 @@ procedure TForm2.N9Click(Sender: TObject);
     ShowMessage('https://ivtipm.github.io/Programming/Glava01/index01.htm#z23');
   end;
 
-procedure TForm2.y2KeyPress(Sender: TObject; var Key: Char); //Процедура нажатия клавиш для всех edit;
+procedure TForm2.y2KeyPress(Sender: TObject; var Key: Char); //РџСЂРѕС†РµРґСѓСЂР° РЅР°Р¶Р°С‚РёСЏ РєР»Р°РІРёС€ РґР»СЏ РІСЃРµС… edit;
   begin
-    if not(Key in ['0' .. '9', #8, '-', FormatSettings.DecimalSeparator]) then //Контроль вводимых символов;
+    if not(Key in ['0' .. '9', #8, '-', FormatSettings.DecimalSeparator]) then //РљРѕРЅС‚СЂРѕР»СЊ РІРІРѕРґРёРјС‹С… СЃРёРјРІРѕР»РѕРІ;
       Key := #0;
   end;
 
