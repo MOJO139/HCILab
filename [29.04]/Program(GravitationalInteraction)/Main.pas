@@ -78,7 +78,7 @@ procedure TForm2.Button1Click(Sender: TObject); //Процедура нажат�
         Results.Cells[0, Results.RowCount - 1] := FloatToStr(powerStor[high(powerStor)].firstBodyMass);
         Results.Cells[1, Results.RowCount - 1] := FloatToStr(powerStor[high(powerStor)].secondBodyMass);
         Results.Cells[2, Results.RowCount - 1] := FloatToStr(powerStor[high(powerStor)].distantionBetweenBodys);
-        Results.Cells[3, Results.RowCount - 1] := FloatToStr(powerStor[high(powerStor)].Result);
+        Results.Cells[3, Results.RowCount - 1] := FloatToStrF(powerStor[high(powerStor)].Result, ffGeneral, 6, 2);
       end;
   end;
 
