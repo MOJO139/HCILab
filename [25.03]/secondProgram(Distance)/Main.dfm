@@ -69,7 +69,7 @@ object Form2: TForm2
       Top = 58
       Width = 100
       Height = 21
-      TabOrder = 1
+      TabOrder = 2
       OnKeyPress = y2KeyPress
     end
     object Calculate: TButton
@@ -84,7 +84,7 @@ object Form2: TForm2
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 4
       OnClick = CalculateClick
     end
     object y1: TEdit
@@ -92,7 +92,7 @@ object Form2: TForm2
       Top = 26
       Width = 100
       Height = 21
-      TabOrder = 3
+      TabOrder = 1
       OnKeyPress = y2KeyPress
     end
     object y2: TEdit
@@ -100,7 +100,7 @@ object Form2: TForm2
       Top = 58
       Width = 100
       Height = 21
-      TabOrder = 4
+      TabOrder = 3
       OnKeyPress = y2KeyPress
     end
   end

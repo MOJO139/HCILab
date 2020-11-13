@@ -67,7 +67,7 @@ procedure TForm2.Button1Click(Sender: TObject); //Процедура нажат�
         Results.Lines.Add('Масса второго тела: ' + secondBodyMass.Text + ';'); //Вывод массы второго тела;
         Results.Lines.Add('Расстояние между телами: ' + distantionBetweenBodys.Text + ';'); //Вывод расстояния между телами;
         Results.Lines.Add('Сила гравитационного взаимодейтсвия тел: ' +
-                          FloatToStr(gPower(StrTofloat(firstBodyMass.Text), StrTofloat(secondBodyMass.Text), StrTofloat(distantionBetweenBodys.Text)))
+                          FloatToStrF(gPower(StrTofloat(firstBodyMass.Text), StrTofloat(secondBodyMass.Text), StrTofloat(distantionBetweenBodys.Text)), ffGeneral, 6, 2)
                            + ';'); //Вывод силы гравитационного взаимодействия между телами;
         Results.Lines.Add(StringOfChar('=', 54));
       end;
@@ -85,6 +85,7 @@ procedure TForm2.FormCreate(Sender: TObject); //Процедура вызыва�
 
     Results.Text := ''; //Очистка Memo;
     Results.Lines.Add(StringOfChar('=', 54)); //Начальный разделитель;
+
     firstBodyMass.Text := intToStr(random(999) + 1); //Генерация рандомного значения массы первого тела;
     secondBodyMass.Text := intToStr(random(99) + 1); //Генерация рандомного значения массы второго тела;
     distantionBetweenBodys.Text := intToStr(random(14000) + 1000); //Генерация рандомного значения растояния между телами;
