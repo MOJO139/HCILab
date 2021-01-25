@@ -1,7 +1,7 @@
 ﻿unit fileControl;
 
 interface
-  uses Power; //Для доступа к gForce подключаем Power;
+  uses Power, System.SysUtils; //Для доступа к gForce подключаем Power;
 
   //Прототипы процедур:
   procedure loadParameters(var firstBodyMass : string; var secondBodyMass : string; var distanceBetweenBodies : string; const path : string);
@@ -58,10 +58,10 @@ implementation
       //Проходимся по массиву и вносим поля его записей в файл:
       for i := 0 to High(_Log) do
         begin
-          Writeln(outputFile, 'Масса первого тела: ', _Log[i].firstBodyMass, ';');
-          Writeln(outputFile, 'Масса второго тела: ', _Log[i].secondBodyMass, ';');
-          Writeln(outputFile, 'Расстояние между телами: ', _Log[i].distantionBetweenBodys, ';');
-          Writeln(outputFile, 'Сила гравитационного взаимодействия: ', _Log[i].Result, ';');
+          Writeln(outputFile, 'Масса первого тела: ', FloatToStrF(_Log[i].firstBodyMass, fffixed, 8, 3), ';');
+          Writeln(outputFile, 'Масса второго тела: ', FloatToStrF(_Log[i].secondBodyMass, fffixed, 8, 3), ';');
+          Writeln(outputFile, 'Расстояние между телами: ', FloatToStrF(_Log[i].distantionBetweenBodys, fffixed, 8, 3), ';');
+          Writeln(outputFile, 'Сила гравитационного взаимодействия: ', FloatToStrF(_Log[i].Result, ffexponent, 8, 3), ';');
           Writeln(outputFile, ''); //Переносим строку для красоты);
         end;
 
