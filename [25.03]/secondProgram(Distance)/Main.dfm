@@ -4,7 +4,7 @@ object Form2: TForm2
   Caption = 'Distanse Between Points'
   ClientHeight = 395
   ClientWidth = 577
-  Color = clPurple
+  Color = 13382502
   Constraints.MinHeight = 454
   Constraints.MinWidth = 593
   Font.Charset = DEFAULT_CHARSET
@@ -26,7 +26,7 @@ object Form2: TForm2
     Width = 561
     Height = 97
     Caption = #1059#1087#1088#1072#1074#1083#1103#1102#1097#1080#1081' '#1073#1083#1086#1082': '
-    Color = clAppWorkSpace
+    Color = 13408665
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
@@ -111,7 +111,7 @@ object Form2: TForm2
     Height = 274
     Anchors = [akLeft, akTop, akRight, akBottom]
     Caption = #1056#1077#1079#1091#1083#1100#1090#1072#1090#1099' '#1074#1099#1095#1080#1089#1083#1103#1077#1085#1080#1103': '
-    Color = clAppWorkSpace
+    Color = 13408665
     ParentBackground = False
     ParentColor = False
     TabOrder = 1
@@ -140,38 +140,38 @@ object Form2: TForm2
     Top = 39
   end
   object MainMenu1: TMainMenu
-    object N1: TMenuItem
+    object menu_file: TMenuItem
       Caption = #1060#1072#1081#1083
-      object N2: TMenuItem
+      object menu_file_open: TMenuItem
         Caption = #1054#1090#1082#1088#1099#1090#1100
-        OnClick = N2Click
+        OnClick = menu_file_openClick
       end
-      object N3: TMenuItem
+      object menu_file_save: TMenuItem
         Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
-        OnClick = N3Click
+        OnClick = menu_file_saveClick
       end
-      object N4: TMenuItem
+      object menu_file_saveLog: TMenuItem
         Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1083#1086#1075
-        OnClick = N4Click
+        OnClick = menu_file_saveLogClick
       end
-      object N5: TMenuItem
+      object menu_file_close: TMenuItem
         Caption = #1042#1099#1081#1090#1080
-        OnClick = N5Click
+        OnClick = menu_file_closeClick
       end
     end
-    object N6: TMenuItem
+    object menu_info: TMenuItem
       Caption = #1057#1087#1088#1072#1074#1082#1072
-      object N7: TMenuItem
+      object menu_info_author: TMenuItem
         Caption = #1040#1074#1090#1086#1088
-        OnClick = N7Click
+        OnClick = menu_info_authorClick
       end
-      object N8: TMenuItem
+      object menu_info_task: TMenuItem
         Caption = #1047#1072#1076#1072#1095#1072
-        OnClick = N8Click
+        OnClick = menu_info_taskClick
       end
-      object N9: TMenuItem
+      object menu_info_link: TMenuItem
         Caption = #1057#1089#1099#1083#1082#1072' '#1085#1072' '#1079#1072#1076#1072#1095#1080
-        OnClick = N9Click
+        OnClick = menu_info_linkClick
       end
     end
   end

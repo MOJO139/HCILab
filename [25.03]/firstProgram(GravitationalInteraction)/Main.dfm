@@ -4,7 +4,7 @@ object Form2: TForm2
   Caption = 'POWER'
   ClientHeight = 556
   ClientWidth = 528
-  Color = clPurple
+  Color = 6710784
   Constraints.MinHeight = 542
   Constraints.MinWidth = 542
   Font.Charset = DEFAULT_CHARSET
@@ -26,7 +26,7 @@ object Form2: TForm2
     Width = 513
     Height = 145
     Caption = #1054#1088#1075#1072#1085#1099' '#1091#1087#1088#1072#1074#1083#1077#1085#1080#1103' '#1076#1072#1085#1085#1099#1084#1080':'
-    Color = clBtnFace
+    Color = 13421721
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
@@ -74,6 +74,7 @@ object Form2: TForm2
       Top = 21
       Width = 121
       Height = 27
+      Color = clWhite
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -85,9 +86,10 @@ object Form2: TForm2
     end
     object secondBodyMass: TEdit
       Left = 219
-      Top = 61
+      Top = 54
       Width = 121
       Height = 27
+      Color = clWhite
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -102,6 +104,7 @@ object Form2: TForm2
       Top = 101
       Width = 121
       Height = 27
+      Color = clWhite
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -134,7 +137,7 @@ object Form2: TForm2
     Height = 380
     Anchors = [akLeft, akTop, akRight, akBottom]
     Caption = #1056#1077#1079#1091#1083#1100#1090#1072#1090#1099' '#1074#1099#1095#1080#1089#1083#1077#1085#1080#1081':'
-    Color = clBtnFace
+    Color = 13421721
     ParentBackground = False
     ParentColor = False
     TabOrder = 1
@@ -147,6 +150,7 @@ object Form2: TForm2
       Width = 506
       Height = 361
       Anchors = [akLeft, akTop, akRight, akBottom]
+      Color = clWhite
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -160,34 +164,34 @@ object Form2: TForm2
     end
   end
   object MainMenu1: TMainMenu
-    object N1: TMenuItem
+    object menu_file: TMenuItem
       Caption = #1060#1072#1081#1083
-      object N2: TMenuItem
+      object menu_file_open: TMenuItem
         Caption = #1054#1090#1082#1088#1099#1090#1100
-        OnClick = N2Click
+        OnClick = menu_file_openClick
       end
-      object N3: TMenuItem
+      object menu_file_save: TMenuItem
         Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
-        OnClick = N3Click
+        OnClick = menu_file_saveClick
       end
-      object N4: TMenuItem
+      object menu_file_saveLog: TMenuItem
         Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1086#1090#1095#1077#1090
-        OnClick = N4Click
+        OnClick = menu_file_saveLogClick
       end
-      object N5: TMenuItem
+      object menu_file_close: TMenuItem
         Caption = #1042#1099#1093#1086#1076
-        OnClick = N5Click
+        OnClick = menu_file_closeClick
       end
     end
-    object N6: TMenuItem
+    object menu_info: TMenuItem
       Caption = #1057#1087#1088#1072#1074#1082#1072
-      object N7: TMenuItem
+      object menu_info_author: TMenuItem
         Caption = #1040#1074#1090#1086#1088
-        OnClick = N7Click
+        OnClick = menu_info_authorClick
       end
-      object N8: TMenuItem
+      object menu_info_task: TMenuItem
         Caption = #1047#1072#1076#1072#1095#1072
-        OnClick = N8Click
+        OnClick = menu_info_taskClick
       end
     end
   end

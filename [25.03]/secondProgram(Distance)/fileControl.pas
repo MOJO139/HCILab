@@ -1,37 +1,48 @@
 ﻿unit fileControl;
 
 interface
+  uses System.SysUtils;
+
   //Прототипы процедур:
-  procedure loadParameters(var fx : string; var fy : string; var sx : string; var sy : string; const path : string);
-  procedure saveParameters(fx, fy, sx, sy : string; const path : string);
+  procedure loadParameters(var fx : real; var fy : real; var sx : real; var sy : real; const path : string);
+  procedure saveParameters(fx, fy, sx, sy : real; const path : string);
   procedure saveLog(_log : string; const path : string);
 
 implementation
   procedure loadParameters; //Процедура загрузки параметров из файла;
     var inputFile : Text; //Создание файловой переменной типа текст;
+        b_fx, b_fy, b_sx, b_sy : string;
 
     begin
       Assign(inputFile, path); //Подключение файла по адресу path;
       Reset(inputFile); //Открытие файла на чтение;
 
-      Readln(inputFile, fx); //Чтение первого икса тела;
-      Readln(inputFile, fy); //Чтение первого игрика тела;
-      Readln(inputFile, sx); //Чтение второго икса тела;
-      Readln(inputFile, sy); //Чтение второго игрика тела;
+      Readln(inputFile, b_fx); //Чтение первого икса тела;
+      Readln(inputFile, b_fy); //Чтение первого игрика тела;
+      Readln(inputFile, b_sx); //Чтение второго икса тела;
+      Readln(inputFile, b_sy); //Чтение второго игрика тела;
 
       Close(inputFile); //Закрытие файла;
 
-      if fx = '' then //Проверка на пустую строку;
-        fx := '0'; //Если пусто, то присваивается 0;
+      if b_fx = '' then //Проверка на пустую строку;
+        fx := 0 //Если пусто, то присваивается 0;
+      else
+        fx := StrToFloat(b_fx);
 
-      if fy = '' then //Проверка на пустую строку;
-        fy := '0'; //Если пусто, то присваивается 0;
+      if b_fy = '' then //Проверка на пустую строку;
+        fy := 0 //Если пусто, то присваивается 0;
+      else
+        fy := StrToFloat(b_fy);
 
-      if sx = '' then //Проверка на пустую строку;
-        sx := '0'; //Если пусто, то присваивается 0;
+      if b_sx = '' then //Проверка на пустую строку;
+        sx := 0 //Если пусто, то присваивается 0;
+      else
+        sx := StrToFloat(b_sx);
 
-      if sy = '' then //Проверка на пустую строку;
-        sy := '0'; //Если пусто, то присваивается 0;
+      if b_sy = '' then //Проверка на пустую строку;
+        sy := 0 //Если пусто, то присваивается 0;
+      else
+        sy := StrToFloat(b_sy);
     end;
 
   procedure saveParameters; //Процедура сохранинеия параметров в файл;
@@ -41,10 +52,10 @@ implementation
       Assign(outputFile, path); //Подключение файла по адресу path;
       Rewrite(outputFile); //Открытие файла на запись;
 
-      Writeln(outputFile, fx); //Запись первого икса в файл;
-      Writeln(outputFile, fy); //Запись первого игрика в файл;
-      Writeln(outputFile, sx); //Запись второго икса в файл;
-      Writeln(outputFile, sy); //Запись второго игрика в файл;
+      Writeln(outputFile, FloatToStrF(fx, ffFixed, 8, 4)); //Запись первого икса в файл;
+      Writeln(outputFile, FloatToStrF(fy, ffFixed, 8, 4)); //Запись первого игрика в файл;
+      Writeln(outputFile, FloatToStrF(sx, ffFixed, 8, 4)); //Запись второго икса в файл;
+      Writeln(outputFile, FloatToStrF(sy, ffFixed, 8, 4)); //Запись второго игрика в файл;
 
       Close(outputFile); //Закрытие файла;
     end;

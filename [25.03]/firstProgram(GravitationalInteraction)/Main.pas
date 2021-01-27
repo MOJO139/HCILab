@@ -20,26 +20,26 @@ type
     distantionBetweenBodys: TEdit;
     Button1: TButton;
     MainMenu1: TMainMenu;
-    N1: TMenuItem;
-    N2: TMenuItem;
-    N3: TMenuItem;
-    N4: TMenuItem;
-    N5: TMenuItem;
-    N6: TMenuItem;
-    N7: TMenuItem;
-    N8: TMenuItem;
+    menu_file: TMenuItem;
+    menu_file_open: TMenuItem;
+    menu_file_save: TMenuItem;
+    menu_file_saveLog: TMenuItem;
+    menu_file_close: TMenuItem;
+    menu_info: TMenuItem;
+    menu_info_author: TMenuItem;
+    menu_info_task: TMenuItem;
     SaveDialog1: TSaveDialog;
     OpenDialog1: TOpenDialog;
 
     //Методы класса:
     procedure FormCreate(Sender: TObject);
-    procedure N3Click(Sender: TObject);
-    procedure N2Click(Sender: TObject);
+    procedure menu_file_saveClick(Sender: TObject);
+    procedure menu_file_openClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
-    procedure N4Click(Sender: TObject);
-    procedure N5Click(Sender: TObject);
-    procedure N7Click(Sender: TObject);
-    procedure N8Click(Sender: TObject);
+    procedure menu_file_saveLogClick(Sender: TObject);
+    procedure menu_file_closeClick(Sender: TObject);
+    procedure menu_info_authorClick(Sender: TObject);
+    procedure menu_info_taskClick(Sender: TObject);
     procedure firstBodyMassKeyPress(Sender: TObject; var Key: Char);
   end;
 
@@ -91,45 +91,43 @@ procedure TForm2.FormCreate(Sender: TObject); //Процедура вызыва�
     distantionBetweenBodys.Text := intToStr(random(14000) + 1000); //Генерация рандомного значения растояния между телами;
   end;
 
-procedure TForm2.N2Click(Sender: TObject); //Процедура нажатия на кнопку "открыть";
-  var b_firstBodyMass, b_secondBodyMass, b_distantionBetweenBodys : string;
+procedure TForm2.menu_file_openClick(Sender: TObject); //Процедура нажатия на кнопку "открыть";
+  var b_firstBodyMass, b_secondBodyMass, b_distantionBetweenBodys : real;
 
   begin
     if OpenDialog1.Execute then //Проверка выполнения диалога открытия;
       loadParameters(b_firstBodyMass, b_secondBodyMass, b_distantionBetweenBodys, OpenDialog1.FileName); //Вывоз процедуры загрузки данных из файла;
+                                                                                             //для того, что бы при отмене загрузки данных из файла
+    //Присвоение значений полям ввода;                                                                //поля не очищались;
+    firstBodyMass.Text := FloatToStrF(b_firstBodyMass, ffFixed, 8, 2);
+    secondBodyMass.Text := FloatToStrF(b_secondBodyMass, ffFixed, 8, 2);
+    distantionBetweenBodys.Text := FloatToStrF(b_distantionBetweenBodys, ffFixed, 8, 2);
 
-    if not(b_firstBodyMass = '') or not(b_secondBodyMass = '') or not(b_distantionBetweenBodys = '') then //Проверка пусных полей считаных из файла
-      begin                                                                                               //для того, что бы при отмене загрузки данных из файла
-        //Присвоение значений полям ввода;                                                                //поля не очищались;
-        firstBodyMass.Text := b_firstBodyMass;
-        secondBodyMass.Text := b_secondBodyMass;
-        distantionBetweenBodys.Text := b_distantionBetweenBodys;
-      end;
   end;
 
-procedure TForm2.N3Click(Sender: TObject); //Процедура нажатия на кнопку "сохранить";
+procedure TForm2.menu_file_saveClick(Sender: TObject); //Процедура нажатия на кнопку "сохранить";
   begin
     if SaveDialog1.Execute then //Проверка выполнения диалога сохранения;
-      saveParameters(firstBodyMass.Text, secondBodyMass.Text, distantionBetweenBodys.Text, SaveDialog1.FileName); //Вывоз процедуры загрузки данных в файла;
+      saveParameters(StrToFloat(firstBodyMass.Text), StrToFloat(secondBodyMass.Text), StrToFloat(distantionBetweenBodys.Text), SaveDialog1.FileName); //Вывоз процедуры загрузки данных в файла;
   end;
 
-procedure TForm2.N4Click(Sender: TObject); //Процедура нажатия на кнопку "сохранить отчет";
+procedure TForm2.menu_file_saveLogClick(Sender: TObject); //Процедура нажатия на кнопку "сохранить отчет";
   begin
     if SaveDialog1.Execute then //Проверка выполнения диалога сохранения;
       saveLog(Results.Text, SaveDialog1.FileName); //Вывоз процедуры загрузки memo в файла;
   end;
 
-procedure TForm2.N5Click(Sender: TObject); //Процедура нажатия на кнопку "выйти";
+procedure TForm2.menu_file_closeClick(Sender: TObject); //Процедура нажатия на кнопку "выйти";
   begin
     form2.Close;
   end;
 
-procedure TForm2.N7Click(Sender: TObject); //Процедура нажатия на кнопку "автор";
+procedure TForm2.menu_info_authorClick(Sender: TObject); //Процедура нажатия на кнопку "автор";
   begin
     ShowMessage('Сделал: Павленко Андрей.');
   end;
 
-procedure TForm2.N8Click(Sender: TObject); //Процедура нажатия на кнопку "задание";
+procedure TForm2.menu_info_taskClick(Sender: TObject); //Процедура нажатия на кнопку "задание";
   begin
     ShowMessage('Сделать программу по расчету силы гравитационного взаимодействия между двумя телами.');
   end;

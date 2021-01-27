@@ -22,26 +22,26 @@ type
     SaveDialog1: TSaveDialog;
     MainMenu1: TMainMenu;
     OpenDialog1: TOpenDialog;
-    N1: TMenuItem;
-    N2: TMenuItem;
-    N3: TMenuItem;
-    N4: TMenuItem;
-    N5: TMenuItem;
-    N6: TMenuItem;
-    N7: TMenuItem;
-    N8: TMenuItem;
-    N9: TMenuItem;
+    menu_file: TMenuItem;
+    menu_file_open: TMenuItem;
+    menu_file_save: TMenuItem;
+    menu_file_saveLog: TMenuItem;
+    menu_file_close: TMenuItem;
+    menu_info: TMenuItem;
+    menu_info_author: TMenuItem;
+    menu_info_task: TMenuItem;
+    menu_info_link: TMenuItem;
 
     //Методы класса:
     procedure FormCreate(Sender: TObject);
     procedure CalculateClick(Sender: TObject);
-    procedure N2Click(Sender: TObject);
-    procedure N3Click(Sender: TObject);
-    procedure N4Click(Sender: TObject);
-    procedure N5Click(Sender: TObject);
-    procedure N7Click(Sender: TObject);
-    procedure N8Click(Sender: TObject);
-    procedure N9Click(Sender: TObject);
+    procedure menu_file_openClick(Sender: TObject);
+    procedure menu_file_saveClick(Sender: TObject);
+    procedure menu_file_saveLogClick(Sender: TObject);
+    procedure menu_file_closeClick(Sender: TObject);
+    procedure menu_info_authorClick(Sender: TObject);
+    procedure menu_info_taskClick(Sender: TObject);
+    procedure menu_info_linkClick(Sender: TObject);
     procedure y2KeyPress(Sender: TObject; var Key: Char);
   end;
 
@@ -87,51 +87,48 @@ procedure TForm2.FormCreate(Sender: TObject); //Процедура вызыва�
     y2.Text := intToStr(Random(101) - 50); //Задание рандомного заничения y2;
   end;
 
-procedure TForm2.N2Click(Sender: TObject); //Процедура нажатия на кнопку "Открыть";
-  var b_fx, b_fy, b_sx, b_sy : string;
+procedure TForm2.menu_file_openClick(Sender: TObject); //Процедура нажатия на кнопку "Открыть";
+  var fx, fy, sx, sy : real;
 
   begin
     if OpenDialog1.Execute then
-      loadParameters(b_fx, b_fy, b_sx, b_sy, OpenDialog1.FileName); //Процедура для загрузки данных из файла;
+      loadParameters(fx, fy, sx, sy, OpenDialog1.FileName); //Процедура для загрузки данных из файла;
 
-    if not(b_fx = '') or not(b_fy = '') or not(b_sx = '') or not(b_sy = '') then
-      begin
-        x1.Text := b_fx;
-        y1.Text := b_fy;
+    x1.Text := FloatToStrF(fx, ffFixed, 8, 4);
+    y1.Text := FloatToStrF(fy, ffFixed, 8, 4);
 
-        x2.Text := b_sx;
-        y2.Text := b_sy;
-      end;
+    x2.Text := FloatToStrF(sx, ffFixed, 8, 4);
+    y2.Text := FloatToStrF(sy, ffFixed, 8, 4);
   end;
 
-procedure TForm2.N3Click(Sender: TObject); //Процедура выполняемая по нажатию кнопки "сохранить";
+procedure TForm2.menu_file_saveClick(Sender: TObject); //Процедура выполняемая по нажатию кнопки "сохранить";
   begin
     if SaveDialog1.Execute then
-      saveParameters(x1.Text, y1.Text, x2.Text, y2.Text, SaveDialog1.FileName); //Процедура для сохранения данных в файл;
+      saveParameters(StrToFloat(x1.Text), StrToFloat(y1.Text), StrToFloat(x2.Text), StrToFloat(y2.Text), SaveDialog1.FileName); //Процедура для сохранения данных в файл;
   end;
 
-procedure TForm2.N4Click(Sender: TObject); //Процедура выполняемая по нажатию кнопки "сохранить отчет";
+procedure TForm2.menu_file_saveLogClick(Sender: TObject); //Процедура выполняемая по нажатию кнопки "сохранить отчет";
   begin
     if SaveDialog1.Execute then
       saveLog(Results.Text, SaveDialog1.FileName); //Процедура для сохранения лога в файл;
   end;
 
-procedure TForm2.N5Click(Sender: TObject); //Процедура выполняемая по нажатию кнопки "выйти";
+procedure TForm2.menu_file_closeClick(Sender: TObject); //Процедура выполняемая по нажатию кнопки "выйти";
   begin
     Form2.Close; //Закрытие формы;
   end;
 
-procedure TForm2.N7Click(Sender: TObject);
+procedure TForm2.menu_info_authorClick(Sender: TObject);
   begin
     ShowMessage('Сделал: Павленко Андрей.');
   end;
 
-procedure TForm2.N8Click(Sender: TObject);
+procedure TForm2.menu_info_taskClick(Sender: TObject);
   begin
     ShowMessage('Вычислить расстояние между двумя точками.');
   end;
 
-procedure TForm2.N9Click(Sender: TObject);
+procedure TForm2.menu_info_linkClick(Sender: TObject);
   begin
     ShowMessage('https://ivtipm.github.io/Programming/Glava01/index01.htm#z23');
   end;
