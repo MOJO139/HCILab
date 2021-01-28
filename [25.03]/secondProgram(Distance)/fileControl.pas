@@ -9,7 +9,7 @@ interface
   procedure saveLog(_log : string; const path : string);
 
 implementation
-  procedure loadParameters; //Процедура загрузки параметров из файла;
+  procedure loadParameters(var fx : real; var fy : real; var sx : real; var sy : real; const path : string); //Процедура загрузки параметров из файла;
     var inputFile : Text; //Создание файловой переменной типа текст;
         b_fx, b_fy, b_sx, b_sy : string;
 
@@ -45,7 +45,7 @@ implementation
         sy := StrToFloat(b_sy);
     end;
 
-  procedure saveParameters; //Процедура сохранинеия параметров в файл;
+  procedure saveParameters(fx, fy, sx, sy : real; const path : string); //Процедура сохранинеия параметров в файл;
     var outputFile : Text; //Создание файловой переменной типа текст;
 
     begin
@@ -60,7 +60,7 @@ implementation
       Close(outputFile); //Закрытие файла;
     end;
 
-  procedure saveLog; //Процедура сохранения лога в файл;
+  procedure saveLog(_log : string; const path : string); //Процедура сохранения лога в файл;
     var outputFile : Text; //Создание файловой переменной типа текст;
 
     begin

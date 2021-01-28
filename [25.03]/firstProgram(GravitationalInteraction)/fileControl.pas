@@ -9,7 +9,7 @@ interface
   procedure saveLog(_log : string; const path : string);
 
 implementation
-  procedure loadParameters; //Процедура загрузки параметров из файла;
+  procedure loadParameters(var firstBodyMass : real; var secondBodyMass : real; var distanceBetweenBodies : real; const path : string); //Процедура загрузки параметров из файла;
     var inputFile : Text; //Создание файловой переменной типа текст;
         b_firstBodyMass, b_secondBodyMass, b_distanceBetweenBodies : string;
 
@@ -39,7 +39,7 @@ implementation
         distanceBetweenBodies := StrToFloat(b_distanceBetweenBodies);
     end;
 
-  procedure saveParameters; //Процедура сохранинеия параметров в файл;
+  procedure saveParameters(firstBodyMass, secondBodyMass, distanceBetweenBodies : real; const path : string); //Процедура сохранинеия параметров в файл;
     var outputFile : Text; //Создание файловой переменной типа текст;
 
     begin
@@ -53,7 +53,7 @@ implementation
       Close(outputFile); //Закрытие файла;
     end;
 
-  procedure saveLog; //Процедура сохранения лога в файл;
+  procedure saveLog(_log : string; const path : string); //Процедура сохранения лога в файл;
     var outputFile : Text; //Создание файловой переменной типа текст;
 
     begin
